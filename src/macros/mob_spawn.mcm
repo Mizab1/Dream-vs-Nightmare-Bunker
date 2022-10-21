@@ -1,0 +1,108 @@
+macro tier_1{
+    execute(if score rng rng_score matches 1..2){
+        macro herobrine $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 3){
+        macro silverfish $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 4){
+        macro blind_zombie $$0 $$1 $$2
+    }
+}
+
+macro tier_2{
+
+    macro tier_1 $$0 $$1 $$2
+
+    execute(if score rng rng_score matches 5){
+        macro dark_wolf $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 6){
+        macro creeper $$0 $$1 $$2 
+    }else execute(if score rng rng_score matches 7){
+        macro nightmare_beast $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 8){
+        macro vindicator $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 9){
+        macro evoker $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 10){
+        macro phantom $$0 $$1 $$2 
+    }
+    macro tier_3 $$0 $$1 $$2
+}
+
+macro tier_3{
+
+    execute(if score rng rng_score matches 11){
+        macro chicken $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 12){
+        macro blaze $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 13){
+        macro ghast $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 14){
+        macro zoglin $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 15){
+       macro bee $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 16){
+        macro spider $$0 $$1 $$2
+    }else execute(if score rng rng_score matches 17){
+        macro zombie_villager $$0 $$1 $$2
+    }
+
+}
+macro herobrine{
+    summon zombie $$0 <%$$1-1%> $$2 {Team:"enemy",DeathLootTable:"minecraft:bat",PersistenceRequired:1b,Tags:["enemy","herobrine"],CustomName:'{"text":"Herobrine","color":"green"}'}
+}
+macro silverfish{
+    summon silverfish $$0 <%$$1-1%> $$2 {Team:"enemy",DeathLootTable:"minecraft:bat",PersistenceRequired:1b,Tags:["enemy"],CustomName:'{"text":"Strong Silverfish","color":"green"}'}
+}
+macro blind_zombie{
+    summon zombie $$0 <%$$1-1%> $$2 {Team:"enemy",DeathLootTable:"minecraft:bat",PersistenceRequired:1b,Tags:["enemy", "blinding_zombie"],CustomName:'{"text":"Blinding Zombie","color":"green"}'}
+}
+macro dark_wolf{
+    summon wolf $$0 <%$$1-1%> $$2 {Team:"enemy",DeathLootTable:"minecraft:bat",PersistenceRequired:1b,Tags:["enemy"],CustomName:'{"text":"Dark Wolf","color":"green"}',AngerTime:2147483647}
+}
+macro nightmare_beast{
+    summon ravager $$0 $$1 $$2 {Team:"enemy",DeathLootTable:"minecraft:bat",PersistenceRequired:1b,Health:20f,Tags:["enemy","ravager","can_break"],CustomName:'{"text":"Nightmare Beast"}',Attributes:[{Name:generic.max_health,Base:20},{Name:generic.attack_damage,Base:4}]}
+}
+macro creeper{
+    summon creeper $$0 $$1 $$2 {DeathLootTable:"minecraft:bat",Team:"enemy",PersistenceRequired:1b,Tags:["enemy","detect_explosion"],Passengers:[{id:"minecraft:zombie",DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["pass"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:999999,ShowParticles:0b}]}],CustomName:'{"text":"Nightmare Creeper","color":"green"}',ActiveEffects:[{Id:15,Amplifier:1b,Duration:999999,ShowParticles:0b}]}
+}
+macro vindicator{
+    # vindicator
+    summon vindicator $$0 $$1 $$2 {Team:"enemy",Tags:["enemy"],DeathLootTable:"minecraft:bat",PersistenceRequired:1b,CustomName:'{"text":"Freddy Krugger"}',Passengers:[{id:"minecraft:zombie",DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["pass"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:999999,ShowParticles:0b}]}]}
+}
+macro evoker{
+    # evoker
+    summon evoker $$0 $$1 $$2 {Team:"enemy",Tags:["enemy"],DeathLootTable:"minecraft:bat",PersistenceRequired:1b,CustomName:'{"text":"Nightmare Evoker"}'}
+}
+macro phantom{
+    # phantom
+    summon phantom $$0 $$1 $$2 {Team:"enemy",Tags:["enemy", "phantom"],DeathLootTable:"minecraft:bat",PersistenceRequired:1b,CustomName:'{"text":"Nightmare Phantom"}'}
+}
+macro chicken{
+    # chicken
+    summon chicken $$0 $$1 $$2 {Team:"enemy",Tags:["enemy", "chicken"],DeathLootTable:"minecraft:bat",PersistenceRequired:1b,CustomName:'{"text":"Nightmare Chicken"}'}
+}
+macro blaze{
+    # blaze
+    summon blaze $$0 $$1 $$2 {Team:"enemy",Tags:["enemy", "blaze"],DeathLootTable:"minecraft:bat",PersistenceRequired:1b,CustomName:'{"text":"Nightmare Blaze"}'}
+}
+macro ghast{
+    summon ghast $$0 <%$$1+3%> $$2 {DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["enemy"],CustomName:'{"text":"Nightmare Ghast","color":"green"}'}
+}
+macro zoglin{
+    summon zoglin $$0 $$1 $$2 {DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["enemy"],CustomName:'{"text":"Nightmare Hoglin","color":"green"}'}
+}
+macro bee{
+    summon bee $$0 $$1 $$2 {DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["enemy"],CustomName:'{"text":"Nightmare Killer Bee","color":"green"}', AngerTime:2147483647}
+}
+macro spider{
+    summon spider $$0 $$1 $$2 {Team:"enemy",Tags:["enemy"],DeathLootTable:"minecraft:bat",PersistenceRequired:1b,CustomName:'{"text":"Nightmare Hand","color":"green"}',Passengers:[{id:"minecraft:zombie",DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["pass"],ActiveEffects:[{Id:14b,Amplifier:1b,Duration:999999,ShowParticles:0b}]}]}
+}
+macro zombie_villager{
+    summon zombie_villager $$0 $$1 $$2 {DeathLootTable:"minecraft:bat",Team:"enemy",Tags:["enemy", "ghost"],CustomName:'{"text":"Nightmare Ghost","color":"green"}',VillagerData:{profession:"minecraft:nitwit",type:"minecraft:plains"}}
+}
+
+
+
+
+
+

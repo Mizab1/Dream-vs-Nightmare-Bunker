@@ -1,0 +1,124 @@
+function defence_info{
+    <%%
+        defence = [
+            `tellraw @s {"text": "Make a 1 block tall Fence for you, with a Fence Gate at the front","color": "green"}`,
+        
+            `tellraw @s {"text": "Make a 2 blocks tall and 2 blocks wide wall","color": "green"}`,
+        
+            `tellraw @s {"text": "Make a 3 blocks deep gap with magma at the bottom","color": "green"}`,
+        
+            `tellraw @s {"text": "Make a row of fire which will stay lit forever","color": "green"}`,
+        
+            `tellraw @s {"text": "A Connon that can automatically fire the Enemy, but has a low rate of fire","color": "green"}`,
+        
+            `tellraw @s {"text": "Very Angry Fairy ;)","color": "green"}`,
+        
+            `tellraw @s {"text": "Slows down the enemy significantly","color": "green"}`,
+
+            `tellraw @s {"text": "Damages the enemy","color": "green"}`,
+        
+            `tellraw @s {"text": "Unlocks a enchantment room","color": "green"}`,
+            
+            `tellraw @s {"text": "Give you a Iron Golem Spawn egg","color": "green"}`,
+            
+            `tellraw @s {"text": "Manual Cannon that you can control, A text will pop up aside the weapons shop, which when click will tp you to the cannon","color": "green"}`,
+            
+            `tellraw @s {"text": "Summons fireworks when a Youtuber on top","color": "green"}`,
+            
+            `tellraw @s {"text": "Create a alternating Cactus wall which will hurt the YouTubers nearby","color": "green"}`,
+            
+            `tellraw @s {"text": "Create a alternating obsidian pillars, with fangs in the non pillar blocks, fangs will only appear if the enemy is on top of the trap","color": "green"}`,
+            
+            `tellraw @s {"text": "Electric Fense which can Electricute the YouTubers","color": "green"}`,
+            
+            `tellraw @s {"text": "Can be place on a grass block, it detonates when an entity steps on it","color": "green"}`,
+            
+            `tellraw @s {"text": "Lay the cobweb around the bunker, effective against slowing the Enemy","color": "green"}`,
+            
+            `tellraw @s {"text": "Laser around the bunker which vaporizes the enemy when touched, does not damage the player","color": "green"}`,
+
+            `tellraw @s {"text": "When enemy steps on it they get damage","color": "green"}`,
+
+            `tellraw @s {"text": "Gives you a dog spawn egg and bones to tame it","color": "green"}`,
+
+            `tellraw @s {"text": "Command block that damages the enemy when stepped","color": "green"}`
+        ]
+        defence.forEach(function (value, i) {
+            emit(`execute if score defence_c private matches ${i+1} run ${value}`)
+        });
+    %%>
+}
+
+    function weapon_info{
+        <%%
+            weapon= [
+                `tellraw @s {"text": "A sword which deals 3 Hearts of damage","color": "green"}`,
+    
+                `tellraw @s {"text": "It deals 3.5 Hearts of damage","color": "green"}`,
+    
+                `tellraw @s {"text": "It can deal 4 Hearts of damage","color": "green"}`,
+    
+                `tellraw @s {"text": "A long Range weapon","color": "green"}`,
+    
+                `tellraw @s {"text": "Ammo for Bow and Crossbow","color": "green"}`,
+    
+                `tellraw @s {"text": "A very Low Reloading Time Crossbow","color": "green"}`,
+    
+                `tellraw @s {"text": "A food that keeps you nourished","color": "green"}`,
+    
+                `tellraw @s {"text": "Used for enchanting tools and armors","color": "green"}`,
+    
+                `tellraw @s {"text": "Used to protect you in intense combat","color": "green"}`,
+
+                `tellraw @s {"text": "Call an airstrike at the entrance of the enemy cave, one time use only, can also kill you if you are too close","color": "green"}`,
+        
+                `tellraw @s {"text": "Summon a lightning strike at the position of all Enemy", "color":"green"}`,
+        
+                `tellraw @s {"text": "Change the weather to thunder for 30 Secs", "color":"green"}`,
+
+                `tellraw @s {"text": "Attracts all the enemy to itself after you click it and throw it", "color":"green"}`,
+
+                `tellraw @s {"text": "An apple but golden", "color":"green"}`,
+
+                `tellraw @s {"text": "Catch the ghost when aimed","color": "green"}`
+            ]
+            weapon.forEach(function (value, i) {
+                emit(`execute if score weapon_c private matches ${i+1} run ${value}`)
+            });
+        %%>
+    }
+    function armor_info{
+        <%%
+            armor = [
+                `tellraw @s {"text": "It provides 3.5 Armor Points","color": "green"}`,
+    
+                `tellraw @s {"text": "It provides 7.5 Armor Points","color": "green"}`,
+    
+                `tellraw @s {"text": "It provides 10 Armor Points","color": "green"}`,
+    
+                `tellraw @s {"text": "It provides 10 Armor Points, with more Knockback Resistance","color": "green"}`
+            ]
+            armor.forEach(function (value, i) {
+                emit(`execute if score armor_c private matches ${i+1} run ${value}`)
+            });
+            total_armor = armor.length;
+        %%>
+    }
+    function potion_info{
+        <%%
+            potion = [
+                `tellraw @s {"text": "Give you 5 mins of Regeneration level 1","color": "green"}`,
+              
+                `tellraw @s {"text": "Give you 5 mins of Strength level 1","color": "green"}`,
+              
+                `tellraw @s {"text": "Give you 5 mins of Saturation level 1","color": "green"}`,
+              
+                `tellraw @s {"text": "Give you 5 mins of Speed level 1","color": "green"}`,
+              
+                `tellraw @s {"text": "Give you 5 mins of Jump Boost level 1","color": "green"}`
+            ]
+            potion.forEach(function (value, i) {
+                emit(`execute if score potion_c private matches ${i+1} run ${value}`)
+            });
+        %%>
+    }

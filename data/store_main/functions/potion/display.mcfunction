@@ -1,0 +1,8 @@
+#built using mc-build (https://github.com/mc-build/mc-build)
+
+execute positioned -42 68 86 run kill @e[type=item_frame,tag=potion_display,distance=..1.5]
+execute if score potion_c private matches 1 run summon item_frame -42 68 86 {Facing:3b,Invisible:1b,Fixed:1b,Tags:["potion_display"],Item:{id:"minecraft:potion",Count:1b,tag:{display:{Name:'[{"text":"Regneration"},{"text":" 25 Points","color":"gold"}]'}}}}
+execute if score potion_c private matches 2 run summon item_frame -42 68 86 {Facing:3b,Invisible:1b,Fixed:1b,Tags:["potion_display"],Item:{id:"minecraft:potion",Count:1b,tag:{display:{Name:'[{"text":"Strength"},{"text":" 25 Points","color":"gold"}]'}}}}
+execute if score potion_c private matches 3 run summon item_frame -42 68 86 {Facing:3b,Invisible:1b,Fixed:1b,Tags:["potion_display"],Item:{id:"minecraft:potion",Count:1b,tag:{display:{Name:'[{"text":"Saturation"},{"text":" 25 Points","color":"gold"}]'}}}}
+execute if score potion_c private matches 4 run summon item_frame -42 68 86 {Facing:3b,Invisible:1b,Fixed:1b,Tags:["potion_display"],Item:{id:"minecraft:potion",Count:1b,tag:{display:{Name:'[{"text":"Speed"},{"text":" 25 Points","color":"gold"}]'}}}}
+execute if score potion_c private matches 5 run summon item_frame -42 68 86 {Facing:3b,Invisible:1b,Fixed:1b,Tags:["potion_display"],Item:{id:"minecraft:potion",Count:1b,tag:{display:{Name:'[{"text":"Jump Boost"},{"text":" 25 Points","color":"gold"}]'},CustomModelData:110001}}}
