@@ -2,7 +2,7 @@
 
 scoreboard players set cannon_av private 0
 function bunker:check_helmet
-tp @s -52 77 94 0 0
+tp @s -40 81 97 0 0
 effect give @s minecraft:slowness 999999 225 true
 effect give @s minecraft:invisibility 999999 225 true
 effect give @s minecraft:resistance 999999 225 true

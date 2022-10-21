@@ -36,4 +36,4 @@ execute as @e[tag=enemy] run scoreboard players add Mobs: stats 1
 execute as @a[team=!main] run team join main @s
 execute as @e[tag=enemy, team=!enemy] run team join enemy @s
 effect give @a night_vision 999999 1 true
-execute as @a[x=-52, y=73, z=94, dy=6, predicate=bunker:sneak] at @s run function bunker:cannon_exit
+execute as @a[x=-40, y=81, z=94, dy=6, predicate=bunker:sneak] at @s run function bunker:cannon_exit
